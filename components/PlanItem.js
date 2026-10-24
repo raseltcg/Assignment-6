@@ -6,7 +6,7 @@ import { FaFire } from "react-icons/fa";
 export default function PlanItem({ workout, tab, onDone, onRemove }) {
   return (
     <div className="flex flex-col gap-4 rounded-2xl bg-ink p-4 sm:flex-row sm:items-center">
-      {/* ছবি */}
+      
       <div className="relative h-32 w-full shrink-0 overflow-hidden rounded-xl sm:h-20 sm:w-36">
         <Image
           src="/workout.png"
@@ -17,7 +17,7 @@ export default function PlanItem({ workout, tab, onDone, onRemove }) {
         />
       </div>
 
-      {/* নাম, equipment, স্ট্যাটস */}
+      
       <div className="min-w-0 flex-1">
         <h3
           className={`font-display text-lg font-bold uppercase tracking-wide text-white ${
@@ -45,7 +45,7 @@ export default function PlanItem({ workout, tab, onDone, onRemove }) {
         </div>
       </div>
 
-      {/* বাটন */}
+      
       <div className="flex items-center gap-2">
         <Link
           href={`/workout/${workout.id}`}
@@ -54,7 +54,7 @@ export default function PlanItem({ workout, tab, onDone, onRemove }) {
           View Details
         </Link>
 
-        {/* Mark as Done শুধু Today's Plan ট্যাবে */}
+        
         {tab === "plan" &&
           (workout.done ? (
             <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-700 px-4 py-2 text-xs font-bold text-slate-300">
@@ -71,7 +71,7 @@ export default function PlanItem({ workout, tab, onDone, onRemove }) {
             </button>
           ))}
 
-        {/* রিমুভ (X) */}
+        
         <button
           onClick={() => onRemove(workout.id)}
           aria-label="Remove"

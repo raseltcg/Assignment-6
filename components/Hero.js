@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
       <div className="grid items-center gap-8 rounded-3xl bg-ink p-6 sm:p-10 md:grid-cols-2 lg:p-14">
-        {/* বাঁ পাশ: লেখা */}
+       
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-accent">
             Workout Library
@@ -31,7 +31,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* ডান পাশ: ছবি */}
+        
         <div className="relative h-64 sm:h-80 md:h-96">
           <Image
             src={HERO_IMAGE}

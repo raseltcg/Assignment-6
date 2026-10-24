@@ -14,7 +14,7 @@ export default function Navbar() {
     { href: "/my-plan", label: "My Plan" },
   ];
 
-  // Workout লিংক হোম আর ডিটেইলস পেজ, দুই জায়গাতেই হাইলাইট থাকবে
+  
   const isActive = (href) =>
     href === "/"
       ? pathname === "/" || pathname.startsWith("/workout")
@@ -23,10 +23,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-ink">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
-        {/* বাঁয়ে: লোগো */}
+       
         <Logo hideTextOnMobile />
 
-        {/* মাঝে: লিংক */}
+        
         <ul className="flex items-center gap-1 sm:gap-2">
           {links.map((link) => (
             <li key={link.href}>
@@ -44,7 +44,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* ডানে: Plan ও Saved ব্যাজ */}
+        
         <div className="flex items-center gap-2">
           <Link
             href="/my-plan"

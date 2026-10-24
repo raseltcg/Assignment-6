@@ -11,7 +11,7 @@ export function PlanProvider({ children }) {
   const [saved, setSaved] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
-  // পেজ খুললে localStorage থেকে আগের ডাটা ফিরিয়ে আনবে
+  
   useEffect(() => {
     try {
       const p = JSON.parse(localStorage.getItem("fitlog-plan"));
@@ -22,7 +22,7 @@ export function PlanProvider({ children }) {
     setLoaded(true);
   }, []);
 
-  // ডাটা বদলালে localStorage এ জমা রাখবে
+ 
   useEffect(() => {
     if (!loaded) return;
     localStorage.setItem("fitlog-plan", JSON.stringify(plan));
@@ -86,7 +86,7 @@ export function PlanProvider({ children }) {
   );
 }
 
-// অন্য কম্পোনেন্ট থেকে সহজে ব্যবহার করার জন্য
+
 export function usePlan() {
   return useContext(PlanContext);
 }

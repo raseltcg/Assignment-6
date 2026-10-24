@@ -36,7 +36,7 @@ export default function Library() {
       </p>
 
       <div className="mt-8">
-        {/* লোডিং অ্যানিমেশন */}
+        
         {loading && (
           <div className="flex flex-col items-center justify-center gap-4 py-24">
             <div className="h-12 w-12 animate-spin rounded-full border-4 border-slate-200 border-t-accent" />
@@ -44,14 +44,14 @@ export default function Library() {
           </div>
         )}
 
-        {/* এরর */}
+       
         {!loading && error && (
           <p className="py-24 text-center text-slate-500">
             Could not load workouts. Please refresh the page.
           </p>
         )}
 
-        {/* কার্ডের গ্রিড */}
+        
         {!loading && !error && (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {workouts.map((workout) => (

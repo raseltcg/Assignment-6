@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FiClock, FiStar } from "react-icons/fi";
 import { FaFire } from "react-icons/fa";
 
-// সব কার্ডে এই একটা ছবিই দেখাবে (public ফোল্ডারের ছবি)
+
 const SINGLE_IMAGE = "/workout.png";
 
 export default function WorkoutCard({ workout }) {
@@ -12,7 +12,7 @@ export default function WorkoutCard({ workout }) {
       href={`/workout/${workout.id}`}
       className="group block overflow-hidden rounded-2xl bg-ink transition hover:-translate-y-1 hover:shadow-xl"
     >
-      {/* ছবি */}
+     
       <div className="relative h-44 w-full overflow-hidden">
         <Image
           src={SINGLE_IMAGE}
@@ -24,7 +24,7 @@ export default function WorkoutCard({ workout }) {
       </div>
 
       <div className="p-5">
-        {/* ট্যাগ */}
+       
         <div className="flex flex-wrap gap-2">
           {workout.muscleGroups.map((tag) => (
             <span
@@ -36,15 +36,15 @@ export default function WorkoutCard({ workout }) {
           ))}
         </div>
 
-        {/* নাম */}
+       
         <h3 className="mt-3 font-display text-xl font-bold uppercase tracking-wide text-white">
           {workout.name}
         </h3>
 
-        {/* equipment */}
+       
         <p className="mt-1 text-xs text-slate-400">{workout.equipment}</p>
 
-        {/* স্ট্যাটস */}
+        
         <div className="mt-4 flex items-center gap-4 border-t border-white/10 pt-4 text-xs text-slate-300">
           <span className="flex items-center gap-1.5">
             <FiClock size={13} />
